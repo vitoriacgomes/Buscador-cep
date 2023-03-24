@@ -33,7 +33,39 @@
     background-color: transparent;
     border: 0;
     font-size: 20px;
-    color: aliceblue;
+    color: #fff;
     outline: none;
     margin-right: 8px;
+}
+.containerInput input::placeholder{
+    color: aliceblue;
+}
+.botaodeprocura{
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.botaodeprocura::hover{
+    transform: scale(1.2);
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 500px;
+    border-radius: 8px;
+}
+.main h2{
+    margin: 16px 0;
+    font-size: 30px;
+}
+.main span{
+    margin-bottom: 15px;
+    font-weight: bold;
 }

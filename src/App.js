@@ -3,25 +3,26 @@ import { useState } from 'react';
 import {FiSearch} from 'react-icons/fi';
 import './style.css'
 
-import api from'./serviços/api';
+import api from './serviços/api';
 
 function App() {
 
-  const [input, setInput] = useState('')
+  const [input, setInput] = useState('');
+  const [cep, setCep] = useState({});
 
   async function handleSearch() { //como estou trabalhando com api, transformei a função em asincrona
-    // 01001000/json/
+    // 01001000/json/ teste
     if (input === ''){
       alert("Por favor, preencha o número do CEP")
-      return
+      return;
     }
-
     try{
-      const response = await api.get('${input}/json'); //aqui eu peguei a função api importada, e add o input com o formado json
-      console.log (response)
-    }
-    catch{
+      const response = await api.get(`${input}/json`); //aqui eu peguei a função api importada, e add o input com o formado json
+      setCep (response.data)
+      setInput("")
+    }  catch{
       alert('Erro ao buscar, tente novamente')
+      setInput("")
     }
   }
 
@@ -39,13 +40,17 @@ function App() {
           <FiSearch size={16} color='000'/>
         </button>
       </div>
-      <main className='main'>
-        <h2> CEP: 63982638</h2>
-        <span> Rua Lugar Nenhum</span>
-        <span> Complemento: numero 38</span>
-        <span> Caxanga</span>
-        <span> Recife-PE</span>
-      </main>
+
+
+      {Object.keys(cep).length > 0 &&(
+        <main className='main'>
+          <h2> CEP: {cep.cep}</h2>
+          <span>{cep.logradouro}</span>
+          <span> Complemento: {cep.complemento}</span>
+          <span> {cep.bairro}</span>
+          <span> {cep.localidade}-{cep.uf}</span>
+        </main>
+      )}
     </div>
   );
 }

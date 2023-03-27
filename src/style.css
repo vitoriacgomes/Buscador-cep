@@ -1,10 +1,12 @@
-.container{
+.page-container{
     height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(#121212, #212b46)
+    background: url(../img/Prancheta\ 3.jpg);
+    background-size: cover;
 }
 .titulo{
     font-size: 300%;
@@ -27,7 +29,7 @@
     padding: 15px;
     display: flex;
     border-radius: 8px;
-    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.9)
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.9);
 }
 .containerInput input{
     background-color: transparent;
@@ -81,3 +83,11 @@
         font-size: 28px;
     }
 }
+.page-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .content-wrap{
+    flex: 0.9;
+  }

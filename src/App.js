@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import {FiSearch} from 'react-icons/fi';
 import './style.css'
+import Footer from './componentes/footer';
 
 import api from './serviços/api';
 
@@ -10,7 +11,7 @@ function App() {
   const [input, setInput] = useState('');
   const [cep, setCep] = useState({});
 
-  async function handleSearch() { //como estou trabalhando com api, transformei a função em asincrona
+  async function handleSearch() { // como estou trabalhando com api, transformei a função em asincrona
     // 01001000/json/ teste
     if (input === ''){
       alert("Por favor, preencha o número do CEP")
@@ -27,9 +28,10 @@ function App() {
   }
 
   return (
-    <div className="container">
+    //page-container
+    <div className="page-container">
+      <div className='content-wrap'>
       <h1 className='titulo'>Buscador de CEP</h1>
-      
       <div className="containerInput">
         <input type="text" 
         placeholder="Digite seu cep" 
@@ -41,7 +43,6 @@ function App() {
         </button>
       </div>
 
-
       {Object.keys(cep).length > 0 &&(
         <main className='main'>
           <h2> CEP: {cep.cep}</h2>
@@ -51,6 +52,8 @@ function App() {
           <span> {cep.localidade}-{cep.uf}</span>
         </main>
       )}
+      </div>
+      <Footer/>
     </div>
   );
 }

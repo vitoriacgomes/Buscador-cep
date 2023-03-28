@@ -71,7 +71,18 @@
     margin-bottom: 15px;
     font-weight: bold;
 }
-@media (max-width:620px){
+.page-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+.content-wrap{
+    flex: 0.9;
+    margin-top: 6%;
+    margin-right: -45%;
+}
+  /*-----RESPONSIVIDADE-----*/
+  @media (max-width:620px){
     .titulo{
         font-size: 60px;
     }
@@ -83,13 +94,18 @@
         font-size: 28px;
     }
 }
-.page-container{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  .content-wrap{
-    flex: 0.9;
-    margin-top: 6%;
-    margin-right: -45%;
-  }
+@media (max-width:500px){
+    .page-container{
+        background: url(../img/dispositivo_movel.jpg);
+        background-size: cover;
+    }
+    .titulo{
+        font-size: 200%;
+        color: aliceblue;
+        animation: linhaverso 2s
+    }
+    .content-wrap{
+        margin-top: 65%;
+        margin-right: 5%;
+    }
+}

@@ -11,3 +11,6 @@ Graças ao uso da API, é possivel fazer a pesquisa de qualquer cep válido, e r
 Também implementei alguns alertas para caso o input esteja invalido:
 
 ![buscador alertas](https://user-images.githubusercontent.com/81329027/228105482-eb5fd0e0-e2ff-49d5-91bb-3977dac06888.gif)
+
+#Link para acessar o projeto:
+https://buscador-ilynx13g1-vitoriacgomes.vercel.app/

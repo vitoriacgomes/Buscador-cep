@@ -3,6 +3,7 @@ import { useState } from 'react';
 import {FiSearch} from 'react-icons/fi';
 import './style.css'
 import Footer from './componentes/footer';
+import NavBar from './componentes/nabar';
 
 import api from './serviços/api';
 
@@ -30,8 +31,9 @@ function App() {
   return (
     //page-container
     <div className="page-container">
+      <NavBar/>
       <div className='content-wrap'>
-      <h1 className='titulo'>Buscador de CEP</h1>
+      <h1 className='titulo'>BUSCADOR DE CEP</h1>
       <div className="containerInput">
         <input type="text" 
         placeholder="Digite seu cep" 

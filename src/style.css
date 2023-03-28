@@ -94,7 +94,7 @@
         font-size: 28px;
     }
 }
-@media (max-width:500px){
+@media (max-width:900px){
     .page-container{
         background: url(../img/dispositivo_movel.jpg);
         background-size: cover;

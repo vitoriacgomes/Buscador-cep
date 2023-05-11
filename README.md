@@ -1,12 +1,10 @@
-# Buscador de Cep - React
+# Buscador de Cep - React ✈️
 
-Nesse projeto realizei um Buscador de Cep assíncrono na forma de WebSite. Utilizei as seguintes linguagens com HTML, CSS, JavaScript. Além de React Navite e aplicações com API.
-
+### *Visão geral do projeto: 
+Nesse projeto realizei um Buscador de Cep assíncrono na forma de WebSite. 
 Esta é a representação da simulação com um cep hipotético:
 
 ![buscador cep](https://user-images.githubusercontent.com/81329027/228104277-b19cc530-08bb-4353-beb8-5e75fb1ad010.gif)
-
-Graças ao uso da API, é possivel fazer a pesquisa de qualquer cep válido, e receber de retorno informações do enderenço completo.
 
 Também implementei alguns alertas para caso o input esteja invalido:
 
@@ -14,3 +12,14 @@ Também implementei alguns alertas para caso o input esteja invalido:
 
 #Link para acessar o projeto: 
 https://buscador-ilynx13g1-vitoriacgomes.vercel.app/
+
+### *Documentação: 
+Utilizei as seguintes linguagens com HTML, CSS, JavaScript. Além de React Navite e aplicações com API.Graças ao uso da API, é possivel fazer a pesquisa de qualquer cep válido, e receber de retorno informações do enderenço completo.
+
+### *Licença: 
+O codigo está sendo inteiramente desenvolvido por mim. Pode ser replicado afim de uso como modelo desde que tenha as referências ao autor. Vitória Gomes.
+
+### *Histórico de versão: 
+Está é a versão final do projeto. Com a land-page inicial e o uso exclusivo da API para verificação de ceps.
+
+
